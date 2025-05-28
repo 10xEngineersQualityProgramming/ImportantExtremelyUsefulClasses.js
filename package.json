@@ -1,0 +1,50 @@
+{
+  "name": "important-extremely-useful-classes",
+  "version": "1.0.0",
+  "description": "Extremely useful classes to use in every project.",
+  "keywords": [
+    "important",
+    "extremelyuseful",
+    "much-needed",
+    "useful",
+    "very-important",
+    "extremely-useful",
+    "extreme",
+    "extremely",
+    "10x",
+    "10x-engineered",
+    "10x-engineer",
+    "truly-10x"
+  ],
+  "homepage": "https://github.com/10xEngineersQualityProgramming/ImportantExtremelyUsefulClasses.js#readme",
+  "bugs": {
+    "url": "https://github.com/10xEngineersQualityProgramming/ImportantExtremelyUsefulClasses.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10xEngineersQualityProgramming/ImportantExtremelyUsefulClasses.js.git"
+  },
+  "license": "MIT",
+  "author": "me",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@not-js/not": "^1.0.0",
+    "cli-color": "^2.0.4",
+    "construct-new": "^1.0.1",
+    "examplebyraji": "^1.0.0",
+    "is-equal-to": "^1.1.2",
+    "is-nil": "^1.0.1",
+    "is-true": "^0.1.1",
+    "logtoconsole": "^1.0.7",
+    "n0p3": "^1.0.2",
+    "qc-core": "^0.0.0",
+    "the-number-one": "^1.0.1",
+    "tru": "^1.0.0",
+    "true": "^0.0.4",
+    "weird-instanceof": "^1.0.0"
+  }
+}
