@@ -1,4 +1,4 @@
-const not = require("@not-jsnot")
+const not = require("@not-js/not")
 const { nullFn: Null } = require("qc-core")
 const isNil = require("is-nil")
 const construct = require("construct-new")
