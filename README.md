@@ -114,6 +114,26 @@ var picocolor_ = picocolor__
 ```
 yeah i have no idea why
 
+## `NilGuardedExecutor`
+
+Executes a function only if **none** of the arguments are `null` or `undefined`.  
+Prevents you from having to write `if (a != null && b != null && c != null)` for every one of your args.
+
+Usage:
+```js
+const { NilGuardedExecutor } = require('important-extremely-useful-classes')
+
+function addThreeNumbers(a, b, c) {
+  return a + b + c
+}
+
+const guarded = new NilGuardedExecutor(addThreeNumbers, 1, 2, 3)
+console.log(guarded.execute()) // 6
+
+const guardedFail = new NilGuardedExecutor(addThreeNumbers, 1, null, 3)
+console.log(guardedFail.execute()) // undefined (because one arg was null)
+
+```
 
 ## contributing
 

@@ -12,6 +12,7 @@ const isEqualTo = require("is-equal-to")
 const t = require("true")
 const one = require("the-number-one").default
 const add = require("examplebyraji")
+const noop = require('es2015-noop')
 
 class Logger {
   constructor(enableLogging) {
@@ -96,6 +97,26 @@ class PicoColorInstance {
   }
 }
 
+class NilGuardedExecutor {
+  constructor(fn, ...args) {
+    this.fn = fn
+    this.args = args
+  }
+
+  execute() {
+    const allDefined = not(() => this.args.some(arg => isNil(arg)))()
+
+    const decision = new TernaryCompare(
+      allDefined,
+      () => this.fn(...this.args),
+      noop
+    )
+
+    return decision.compare()()
+  }
+}
+
+
 
 module.exports = {
   Logger,
@@ -103,5 +124,6 @@ module.exports = {
   TernaryCompare,
   ObjectOrFunctionParemeterName,
   CLIColorInstance,
-  PicoColorInstance
+  PicoColorInstance,
+  NilGuardedExecutor
 }
