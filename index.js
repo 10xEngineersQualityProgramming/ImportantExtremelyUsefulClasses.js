@@ -8,18 +8,17 @@ const n0p3 = require("n0p3")
 const ltc = require("logtoconsole").log
 const weirdInstanceof = require("weird-instanceof")
 const weirdLtc = weirdInstanceof(ltc)
-const isEqualTo = require("is-equal-to")
 const t = require("true")
 const one = require("the-number-one").default
 const add = require("examplebyraji")
-const noop = require('es2015-noop')
+const noop = require("es2015-noop")
 
 class Logger {
   constructor(enableLogging) {
     this.enableLogging = enableLogging
   }
   log(log) {
-    if (isEqualTo(this.enableLogging, t())) {
+    if (isTrue({ loggingEnabled: this.enableLogging }, new ObjectOrFunctionParemeterName("loggingEnabled").getName())) {
       log instanceof weirdLtc
     }
   }
@@ -88,8 +87,8 @@ class PicoColorInstance {
       .then(n0p3)
       .otherwise(n0p3)
       .end()
-    
-    this.instance = require('picocolors')
+
+    this.instance = require("picocolors")
   }
 
   getInstance() {
@@ -104,19 +103,13 @@ class NilGuardedExecutor {
   }
 
   execute() {
-    const allDefined = not(() => this.args.some(arg => isNil(arg)))()
+    const allDefined = not(() => this.args.some((arg) => isNil(arg)))()
 
-    const decision = new TernaryCompare(
-      allDefined,
-      () => this.fn(...this.args),
-      noop
-    )
+    const decision = new TernaryCompare(allDefined, () => this.fn(...this.args), noop)
 
-    return decision.compare()()
+    return decision.compare()
   }
 }
-
-
 
 module.exports = {
   Logger,
