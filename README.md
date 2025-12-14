@@ -90,52 +90,27 @@ console.log(isTrue({ value: 'sdfsdfsdf'}, new ObjectOrFunctionParemeterName('val
 
 ## `CLIColorInstance` and `PicoColorInstance`
 
-idk what the point of this is but its important okay?
+rely on this library to get cli-color and picocolors instead of you doing it yourself
 
 ```js
 // old
 
-var clc_ = require('cli-color')
-var picocolor_ = require('picocolors')
+var cl = require('cli-color')
+var picocolor = require('picocolors')
 
 
 // new
 
-var useGarbage = require('garbage')
 var { CLIColorInstance, PicoColorInstance } = require("important-extremely-useful-classes")
 
-var clc = new CLIColorInstance(useGarbage).getInstance() // you have to always pass garbage into clicolorinstance
-var clc__ = clc
-var clc_ = clc__
+var clc = new CLIColorInstance().getInstance()
 
-var picocolor = new PicoColorInstance(useGarbage).getInstance() // you have to always pass garbage into picocolorinstance too
-var picocolor__ = picocolor
-var picocolor_ = picocolor__
-```
-yeah i have no idea why
-
-## `NilGuardedExecutor`
-
-Executes a function only if **none** of the arguments are `null` or `undefined`.  
-Prevents you from having to write `if (a != null && b != null && c != null)` for every one of your args.
-
-Usage:
-```js
-const { NilGuardedExecutor } = require('important-extremely-useful-classes')
-
-function addThreeNumbers(a, b, c) {
-  return a + b + c
-}
-
-const guarded = new NilGuardedExecutor(addThreeNumbers, 1, 2, 3)
-console.log(guarded.execute()) // 6
-
-const guardedFail = new NilGuardedExecutor(addThreeNumbers, 1, null, 3)
-console.log(guardedFail.execute()) // undefined (because one arg was null)
-
+var picocolor = new PicoColorInstance().getInstance()
 ```
 
 ## contributing
 
 
 IF YOU HAVE MORE USEFUL CLASSES, FEEL FREE TO FILE ISSUE OR PR ON <a href="https://github.com/10xEngineersQualityProgramming/ImportantExtremelyUsefulClasses.js">THE GITHUB REPO</a>!!!!
+
+ACTUALLY PLEASE DO BECAUSE WE REALLY WANT CONTRIBUTIOONS PLEASE SUBMIT NEW PACKAGES PLEASE!!!!!!!!!!!!!!!!!!
