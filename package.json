@@ -1,6 +1,6 @@
 {
   "name": "important-extremely-useful-classes",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Extremely useful classes to use in every project.",
   "keywords": [
     "important",
@@ -32,15 +32,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@not-js/not": "^1.0.0",
     "cli-color": "^2.0.4",
     "construct-new": "^2.0.3",
     "examplebyraji": "^1.0.0",
-    "is-nil": "^1.0.1",
     "is-true": "^0.1.1",
     "logtoconsole": "^1.0.7",
     "n0p3": "^1.0.2",
-    "qc-core": "^0.0.0",
     "the-number-one": "^1.0.1",
     "tru": "^1.0.0",
     "weird-instanceof": "^1.0.0"

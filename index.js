@@ -1,6 +1,3 @@
-const not = require("@not-js/not")
-const { nullFn: Null } = require("qc-core")
-const isNil = require("is-nil")
 const construct = require("construct-new")
 const tru = require("tru")
 const isTrue = require("is-true")
@@ -48,11 +45,7 @@ class ObjectOrFunctionParemeterName {
   }
   getName() {
     const name = this.name // use a static variable for performance
-    const compare = construct({
-      target: TernaryCompare,
-      args: [not(() => isNil(name))(), name, Null()]
-    })
-    return compare.compare()
+    return name
   }
 }
 
